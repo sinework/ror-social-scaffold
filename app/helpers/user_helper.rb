@@ -1,6 +1,4 @@
 module UserHelper
-  # rubocop:disable Lint/UselessAssignment
-
   def render_friendship_btn(user)
     return if current_user == user
 
@@ -16,11 +14,15 @@ module UserHelper
                 friendship_path(search_friendship(user.id, current_user.id)),
                 method: :put, class: ' btn btn-success'
       end
-      link << capture { link_to 'Delete Request', friendship_path(delete_param), method: :delete, class: ' btn btn-Danger' }
+      link << capture do
+        link_to 'Delete Request',
+                friendship_path(delete_param), method: :delete, class: ' btn btn-Danger'
+      end
     elsif current_user.request_exists?(user)
-      link = capture { link_to 'Delete Request', friendship_path(delete_param), method: :delete, class: ' btn btn-Danger' }
+      link = capture do
+        link_to 'Delete Request',
+                friendship_path(delete_param), method: :delete, class: ' btn btn-Danger'
+      end
     end
   end
 end
-
-# rubocop:enable, Lint/UselessAssignment
