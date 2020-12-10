@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    timeline_posts
+    # timeline_posts
+    combined_posts
   end
 
   def create
@@ -21,6 +22,19 @@ class PostsController < ApplicationController
 
   def timeline_posts
     @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+  end
+
+  def combined_posts
+    all_posts = []
+    current_user.friends.each do |f|
+      f.posts.each do |p|
+        all_posts << p
+      end
+    end
+    current_user.posts.each do |p|
+      all_posts << p
+    end
+    @combined_posts ||= all_posts.sort { |a, b| b.created_at <=> a.created_at }
   end
 
   def post_params

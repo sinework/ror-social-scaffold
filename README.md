@@ -2,6 +2,15 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+
+<img src="./app/assets/images/1.PNG" width="1200px" height="450px" />
+
+
+<img src="./app/assets/images/2.PNG" width="1200px" height="450px" />
+
+<img src="./app/assets/images/3.PNG" width="1200px" height="450px" />
+
+
 ## Built With
 
 - Ruby v2.7.1
