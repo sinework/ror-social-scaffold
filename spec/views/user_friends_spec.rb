@@ -53,7 +53,7 @@ RSpec.describe 'Main flow', type: :system do
       sleep 1
 
       fill_in('user[name]', with: 'Test')
-      fill_in('user[email]', with: 'test@email.com')
+      fill_in('user[email]', with: 'test@new.com')
       fill_in('user[password]', with: '123456')
       fill_in('user[password_confirmation]', with: '123456')
       sleep 1

@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'friendships/index'
-  # get 'friendships/confirm_request'
-  # get 'friendships/add_friend'
-  # get 'friendships/unfriend'
-  # get 'friendships/freind_list'
   # get 'friendships/people_you_may_know'
   root 'posts#index'
 
