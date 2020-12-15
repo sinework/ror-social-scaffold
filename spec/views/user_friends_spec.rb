@@ -62,10 +62,6 @@ RSpec.describe 'Main flow', type: :system do
 
       click_link('All users')
 
-      # Request a new friend
-      sleep 1
-      click_link('Add as a Friend')
-
       # Logout friend
       sleep 1
       click_link('Sign out')

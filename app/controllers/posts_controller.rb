@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, notice: 'Post was successfully created.'
     else
-      timeline_posts
+      combined_posts
       render :index, alert: 'Post was not created.'
     end
   end
@@ -25,15 +25,8 @@ class PostsController < ApplicationController
   end
 
   def combined_posts
-    all_posts = []
-    current_user.friends.each do |f|
-      f.posts.each do |p|
-        all_posts << p
-      end
-    end
-    current_user.posts.each do |p|
-      all_posts << p
-    end
+    all_posts = Post.where(user: current_user.friends)
+    all_posts += current_user.posts
     @combined_posts ||= all_posts.sort { |a, b| b.created_at <=> a.created_at }
   end
 
