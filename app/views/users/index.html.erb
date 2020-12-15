@@ -1,5 +1,26 @@
+
+<div class="row">
+<div class="col">
+<h1>Requests sent</h1>
+<section class="users-section">
+  <ul class="users-list">
+  
+    <%= render @requests_waiting %>
+  </ul>
+</section></div>
+<div class="col ">
+<h1>All users</h1>
 <section class="users-section">
   <ul class="users-list">
     <%= render @users %>
   </ul>
 </section>
+</div>
+<div class="col "><section class="users-section">
+<h1>Friend requests</h1>
+  <ul class="users-list">
+    <%= render @friend_requests%>
+  </ul>
+</section></div>
+
+</div>

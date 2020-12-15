@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 6.0.3.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
@@ -21,7 +21,9 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -42,10 +44,17 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 group :test do
+  gem 'capybara'
+  gem 'chromedriver-helper', '1.2.0'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'rspec'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
