@@ -18,7 +18,7 @@ RSpec.describe User do
       expect(subject).to be_valid
     end
 
-    it 'The name of the user should exist' do
+    it 'The name of the user should not exist' do
       subject.name = ''
       expect(subject).not_to be_valid
     end
@@ -28,7 +28,7 @@ RSpec.describe User do
       expect(subject).not_to be_valid
     end
 
-    it 'The email should exist' do
+    it 'The email should not exist' do
       subject.email = ''
       expect(subject).not_to be_valid
     end
