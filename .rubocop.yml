@@ -1,12 +1,12 @@
 AllCops:
   Exclude:
     - "db/**/*"
-    - "bin/*"
+    - "bin/*" 
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-
+    - "node_modules/**/*.{css,scss}"
   DisplayCopNames: true
 
 Layout/LineLength:
@@ -24,9 +24,12 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  ExcludedMethods: ["describe"]
-  Max: 30
-
+  ExcludedMethods: ['describe']
+  Max: 40
+Metrics/CyclomaticComplexity:
+  Max : 8
+Metrics/PerceivedComplexity:
+  Max : 9
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
@@ -49,6 +52,9 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
+Lint/UselessAssignment:
+  Enabled: false
+
 Lint/StructNewOverride:
   Enabled: false
 Style/HashEachMethods:
