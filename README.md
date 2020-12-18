@@ -16,6 +16,8 @@
 - Ruby v2.7.1
 - Ruby on Rails v6.0.3.4
 
+## See the Live version here - > [Live Link](https://stark-meadow-55953.herokuapp.com/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
