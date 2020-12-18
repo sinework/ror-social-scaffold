@@ -302,7 +302,7 @@ DEPENDENCIES
   byebug
   capybara
   chromedriver-helper (= 1.2.0)
-  coffee-rails (~> 4.2)
+  coffee-rails
   database_cleaner (~> 1.8, >= 1.8.5)
   devise
   jbuilder (~> 2.5)
