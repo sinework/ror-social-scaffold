@@ -2,6 +2,12 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+## Built With
+
+- Ruby v2.7.1
+- Ruby on Rails v6.0.3.4
+
+## See the Live version here - > [Live Link](https://stark-meadow-55953.herokuapp.com/)
 
 <img src="./app/assets/images/1.PNG" width="1200px" height="450px" />
 
@@ -10,13 +16,6 @@
 
 <img src="./app/assets/images/3.PNG" width="1200px" height="450px" />
 
-
-## Built With
-
-- Ruby v2.7.1
-- Ruby on Rails v6.0.3.4
-
-## See the Live version here - > [Live Link](https://stark-meadow-55953.herokuapp.com/)
 
 ## Getting Started
 
