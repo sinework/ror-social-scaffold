@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'friendships/people_you_may_know'
   root 'posts#index'
 
   devise_for :users
